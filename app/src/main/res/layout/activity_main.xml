@@ -28,8 +28,7 @@
         android:text="@string/sign_up_with"
         android:textSize="@dimen/text_size_16"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_signup"
-        android:layout_marginStart="@dimen/margin_15" />
+        app:layout_constraintTop_toBottomOf="@id/tv_signup" />
 
     <ImageView
         android:id="@+id/iv_google_signin"
@@ -39,8 +38,7 @@
         android:layout_marginTop="@dimen/margin_15"
         android:src="@drawable/ic_google"
         app:layout_constraintStart_toEndOf="@id/tv_signp_with"
-        app:layout_constraintTop_toBottomOf="@id/tv_signup"
-        android:layout_marginStart="@dimen/margin_10" />
+        app:layout_constraintTop_toBottomOf="@id/tv_signup" />
 
     <ImageView
         android:id="@+id/iv_fb_signin"
@@ -50,7 +48,20 @@
         android:layout_marginTop="@dimen/margin_15"
         android:src="@drawable/ic_facebook"
         app:layout_constraintStart_toEndOf="@id/iv_google_signin"
-        app:layout_constraintTop_toBottomOf="@id/tv_signup"
-        android:layout_marginStart="@dimen/margin_10" />
+        app:layout_constraintTop_toBottomOf="@id/tv_signup" />
+
+    <TextInputLayout
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_signp_with">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/form_username" />
+
+    </TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

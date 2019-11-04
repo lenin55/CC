@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_20"
+    android:background="@drawable/rectangle_white_cardview">
+
+    <TextView
+        android:id="@+id/tv_contest_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/cricket_contest"
+        android:textSize="@dimen/text_size_25"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_no_of_matches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@drawable/rectangle_light_blue"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="5 Matches"
+        android:textColor="#5276E1"
+        android:textSize="@dimen/ts_10"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_contest_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_contest_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_contest_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_150"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:src="@drawable/ic_cricket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_contest_name" />
+
+    <TextView
+        android:id="@+id/tv_contest_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:lines="2"
+        android:text="@string/we_created_teams_for_you_n_just_predict_and_win"
+        android:textSize="@dimen/ts_16"
+        app:layout_constraintStart_toEndOf="@id/iv_contest_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_contest_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_25"
+        android:background="@drawable/button_red"
+        android:gravity="center"
+        android:padding="@dimen/margin_10"
+        android:text="@string/play_now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_contest_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

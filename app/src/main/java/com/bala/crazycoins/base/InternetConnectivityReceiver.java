@@ -36,7 +36,10 @@ public class InternetConnectivityReceiver {
         ConnectivityManager
                 connectivityManager = (ConnectivityManager) BaseApplication.getInstance().
                 getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        NetworkInfo networkInfo = null;
+        if (connectivityManager != null) {
+            networkInfo = connectivityManager.getActiveNetworkInfo();
+        }
         return networkInfo != null && networkInfo.isConnectedOrConnecting();
     }
 

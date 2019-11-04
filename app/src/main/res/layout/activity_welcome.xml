@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#250059"
+        tools:context=".views.WelcomeScreenActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cup" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:text="Welcome to Crazy Play \n world!!!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_26"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_cup" />
+
+        <TextView
+            android:id="@+id/tv_lets_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@drawable/button_red"
+            android:gravity="center"
+            android:padding="@dimen/margin_20"
+            android:text="@string/let_s_play"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_20"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+
+        <TextView
+            android:id="@+id/tv_signin"
+            android:layout_width="@dimen/margin_120"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_80"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/button_red_border"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingTop="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_20"
+            android:paddingBottom="@dimen/margin_15"
+            android:text="@string/sign_in"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/ts_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_signup"
+            app:layout_constraintTop_toBottomOf="@id/tv_lets_play" />
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="@dimen/margin_120"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/button_red_border"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingTop="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_20"
+            android:paddingBottom="@dimen/margin_15"
+            android:text="@string/sign_up"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/ts_14"
+            app:layout_constraintLeft_toRightOf="@id/tv_signin"
+            app:layout_constraintTop_toBottomOf="@id/tv_lets_play" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

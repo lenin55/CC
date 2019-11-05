@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:background="#250059"
         tools:context=".views.WelcomeScreenActivity">
 
@@ -76,6 +71,7 @@
             android:textSize="@dimen/ts_14"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/tv_signup"
+            android:layout_marginLeft="@dimen/margin_80"
             app:layout_constraintTop_toBottomOf="@id/tv_lets_play" />
 
         <TextView
@@ -96,5 +92,13 @@
             android:textSize="@dimen/ts_14"
             app:layout_constraintLeft_toRightOf="@id/tv_signin"
             app:layout_constraintTop_toBottomOf="@id/tv_lets_play" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

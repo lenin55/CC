@@ -22,4 +22,8 @@ public class SignUpFragmet extends BaseFragment<SignUpViewModel, FragmentSignUpB
     public int getBindingVariable() {
         return 0;
     }
+
+    public static SignUpFragmet newInstance() {
+        return new SignUpFragmet();
+    }
 }

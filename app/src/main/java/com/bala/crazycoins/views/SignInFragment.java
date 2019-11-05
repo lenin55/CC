@@ -22,4 +22,9 @@ public class SignInFragment extends BaseFragment<SignInViewModel, FragmentSignIn
     public int getBindingVariable() {
         return 0;
     }
+
+    public static SignInFragment newInstance() {
+        return new SignInFragment();
+    }
+
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -56,7 +56,7 @@
                 android:layout_marginStart="@dimen/margin_10"
                 android:layout_marginLeft="@dimen/margin_10"
                 android:layout_marginTop="@dimen/margin_15"
-                android:src="@drawable/ic_google"
+                app:srcCompat="@drawable/ic_google"
                 app:layout_constraintStart_toEndOf="@id/tv_signp_with"
                 app:layout_constraintTop_toBottomOf="@id/tv_signup" />
 
@@ -67,7 +67,7 @@
                 android:layout_marginStart="@dimen/margin_10"
                 android:layout_marginLeft="@dimen/margin_10"
                 android:layout_marginTop="@dimen/margin_15"
-                android:src="@drawable/ic_facebook"
+                app:srcCompat="@drawable/ic_facebook"
                 app:layout_constraintStart_toEndOf="@id/iv_google_signin"
                 app:layout_constraintTop_toBottomOf="@id/tv_signup" />
 
@@ -94,29 +94,57 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_or">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_username"
+                    android:layout_marginStart="@dimen/margin_15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_15"
-                    android:layout_marginRight="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
                     android:background="@drawable/edittext_states"
-                    android:hint="@string/username"
-                    android:padding="@dimen/margin_15"
-                    android:textColor="@color/text_black"
-                    android:textSize="@dimen/ts_14" />
+                    android:hint="@string/username_email"
+                    android:padding="@dimen/margin_10"
+                    android:textColorHint="@color/text_black"
+                    android:visibility="visible">
 
-                <EditText
+                    <EditText
+                        android:id="@+id/et_expiry_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:padding="@dimen/margin_5"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/ts_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_15"
                     android:layout_marginTop="@dimen/margin_15"
-                    android:layout_marginRight="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
                     android:background="@drawable/edittext_states"
                     android:hint="@string/password"
-                    android:inputType="textPassword"
-                    android:padding="@dimen/margin_15"
-                    android:textColor="@color/text_black"
-                    android:textSize="@dimen/ts_14" />
+                    android:padding="@dimen/margin_10"
+                    android:textColorHint="@color/text_black"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/margin_5"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/ts_14" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -130,12 +158,13 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_already_have_account"
+                android:id="@+id/tv_not_a_member"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_25"
-                android:text="Not a Member?"
+                android:layout_marginBottom="24dp"
+                android:text="Not a Member? "
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.429"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
@@ -148,7 +177,21 @@
                 android:textColor="@color/text_blue"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tv_already_have_account" />
+                android:layout_marginEnd="@dimen/margin_25"
+                android:layout_marginRight="@dimen/margin_20"
+                app:layout_constraintEnd_toStartOf="@id/fab_next"
+                app:layout_constraintStart_toEndOf="@id/tv_not_a_member" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_15"
+                app:backgroundTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:srcCompat="@drawable/ic_arrow_forward" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".views.OTPFragment">
 
 
     <FrameLayout
         android:id="@+id/frame_otp_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_350"
+        android:layout_height="wrap_content"
         android:background="@drawable/otp_curve_background"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -55,17 +56,52 @@
         android:text="Enter the validation code you received by SMS"
         app:layout_constraintTop_toBottomOf="@id/tv_enter_otp" />
 
-    <!--<com.mukesh.OtpView
+    <com.mukesh.OtpView
+        android:layout_width="wrap_content"
+        android:clickable="true"
         app:layout_constraintTop_toBottomOf="@id/tv_enter_validation_msg"
         android:id="@+id/otp_view"
-        android:layout_width="match_parent"
+        android:focusable="true"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:inputType="number"
-        android:itemBackground="@drawable/edittext_states"
-        android:textColor="@android:color/white"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/colorPrimary"
+        app:itemSpacing="@dimen/margin_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:itemCount="4"
-        app:lineColor="@color/colorPrimary"
-        app:viewType="rectangle"
-        />-->
+        app:viewType="rectangle" />
+
+    <TextView
+        android:id="@+id/tv_receive_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/did_t_get_code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/resend"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_receive_code"
+        app:layout_constraintTop_toBottomOf="@id/otp_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_arrow_forward" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,9 @@
 package com.bala.crazycoins.views;
 
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.bala.crazycoins.R;
@@ -25,5 +29,15 @@ public class SignUpFragmet extends BaseFragment<SignUpViewModel, FragmentSignUpB
 
     public static SignUpFragmet newInstance() {
         return new SignUpFragmet();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        view.findViewById(R.id.fab_next).setOnClickListener(v -> {
+            if (getActivity() instanceof WelcomeScreenActivity) {
+                ((WelcomeScreenActivity) getActivity()).addFragment(OTPFragment.newInstance(), true, false);
+            }
+        });
     }
 }

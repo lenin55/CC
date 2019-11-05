@@ -7,9 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.bala.crazycoins.R;
@@ -18,6 +20,12 @@ import com.bala.crazycoins.R;
 public class OTPFragment extends Fragment {
 
     private int height;
+
+    private FrameLayout fmBackground;
+
+    public static OTPFragment newInstance() {
+        return new OTPFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,13 +39,16 @@ public class OTPFragment extends Fragment {
         super.onCreate(savedInstanceState);
         WindowManager wm = (WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE);
         Display display = wm.getDefaultDisplay();
-        height = display.getHeight() / 2;
+        height = display.getHeight();
     }
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.frame_otp_bg).setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, height));
+        fmBackground = view.findViewById(R.id.frame_otp_bg);
+        ConstraintLayout.LayoutParams newLayoutParams = (ConstraintLayout.LayoutParams) fmBackground.getLayoutParams();
+        newLayoutParams.height = height / 2;
+        fmBackground.setLayoutParams(newLayoutParams);
     }
 }

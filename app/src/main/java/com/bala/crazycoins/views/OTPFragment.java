@@ -1,6 +1,7 @@
 package com.bala.crazycoins.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -50,5 +51,9 @@ public class OTPFragment extends Fragment {
         ConstraintLayout.LayoutParams newLayoutParams = (ConstraintLayout.LayoutParams) fmBackground.getLayoutParams();
         newLayoutParams.height = height / 2;
         fmBackground.setLayoutParams(newLayoutParams);
+        view.findViewById(R.id.fab_next).setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), HomeActivity.class));
+            getActivity().finish();
+        });
     }
 }

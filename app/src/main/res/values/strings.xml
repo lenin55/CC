@@ -25,4 +25,8 @@
     <string name="username_email">User Name or Email Address</string>
     <string name="did_t_get_code">Didn’t get code? </string>
     <string name="resend">Resend</string>
+    <string name="please_enter_the_otp_here">Please Enter the OTP here</string>
+    <string name="enter_the_validation_code_you_received_by_sms">Enter the validation code you received by SMS</string>
+    <string name="otp_validated_successfully">OTP validated Successfully</string>
+    <string name="your_mobile_number_email_is_verified">Your Mobile Number/Email is verified</string>
 </resources>

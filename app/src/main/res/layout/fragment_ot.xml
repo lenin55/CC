@@ -29,71 +29,111 @@
         android:layout_marginTop="@dimen/margin_25"
         android:drawableLeft="@drawable/ic_left_arrow"
         android:drawablePadding="@dimen/margin_20"
-        android:text="OTP Validation"
+        android:text="OTP Validate"
         android:textColor="@color/text_black"
         android:textSize="@dimen/text_size_25"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@id/frame_otp_bg" />
 
-    <TextView
-        android:id="@+id/tv_enter_otp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/otp_enter_view"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_15"
-        android:gravity="center"
-        android:text="Please Enter the OTP here"
-        android:textSize="@dimen/ts_18"
-        android:textStyle="bold"
+        android:layout_margin="@dimen/margin_25"
+        android:visibility="visible"
         android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/frame_otp_bg" />
+        app:layout_constraintTop_toBottomOf="@id/frame_otp_bg">
 
-    <TextView
-        android:id="@+id/tv_enter_validation_msg"
+        <TextView
+            android:id="@+id/tv_enter_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/please_enter_the_otp_here"
+            android:textSize="@dimen/ts_18"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_enter_validation_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15"
+            android:gravity="center"
+            android:text="@string/enter_the_validation_code_you_received_by_sms"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_otp" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:textColor="@color/colorPrimary"
+            app:itemCount="4"
+            app:itemSpacing="@dimen/margin_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_validation_msg"
+            app:viewType="rectangle" />
+
+        <TextView
+            android:id="@+id/tv_receive_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/did_t_get_code"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otp_view" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/resend"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_receive_code"
+            app:layout_constraintTop_toBottomOf="@id/otp_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_15"
-        android:gravity="center"
-        android:text="Enter the validation code you received by SMS"
-        app:layout_constraintTop_toBottomOf="@id/tv_enter_otp" />
+        android:layout_margin="@dimen/margin_25"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/frame_otp_bg">
 
-    <com.mukesh.OtpView
-        android:layout_width="wrap_content"
-        android:clickable="true"
-        app:layout_constraintTop_toBottomOf="@id/tv_enter_validation_msg"
-        android:id="@+id/otp_view"
-        android:focusable="true"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:inputType="number"
-        android:focusableInTouchMode="true"
-        android:textColor="@color/colorPrimary"
-        app:itemSpacing="@dimen/margin_20"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:itemCount="4"
-        app:viewType="rectangle" />
+        <TextView
+            android:id="@+id/tv_otp_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/otp_validated_successfully"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_receive_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_30"
-        android:text="@string/did_t_get_code"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/otp_view" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_5"
-        android:layout_marginLeft="@dimen/margin_5"
-        android:layout_marginTop="@dimen/margin_30"
-        android:text="@string/resend"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/tv_receive_code"
-        app:layout_constraintTop_toBottomOf="@id/otp_view" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15"
+            android:drawableBottom="@drawable/ic_circle_tick"
+            android:drawablePadding="@dimen/margin_30"
+            android:text="@string/your_mobile_number_email_is_verified"
+            android:textSize="@dimen/ts_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_otp_success" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_next"

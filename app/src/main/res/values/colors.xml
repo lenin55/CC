@@ -12,6 +12,7 @@
     <color name="app_background">#EFEFEF</color>
     <color name="color_light_blue">#2A0069FF</color>
     <color name="color_red">#FF0024</color>
+    <color name="color_blue">#0069FF</color>
     <color name="blue_line">#330069FF</color>
     <color name="light_green">#08C330</color>
 </resources>

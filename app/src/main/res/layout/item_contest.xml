@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/margin_20"
@@ -12,15 +13,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_15"
         android:text="@string/cricket_contest"
-        android:textSize="@dimen/text_size_25"
+        android:textSize="@dimen/text_size_20"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_no_of_matches"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="72dp"
+        android:layout_height="26dp"
         android:layout_marginStart="@dimen/margin_15"
         android:layout_marginLeft="@dimen/margin_15"
         android:layout_marginTop="@dimen/margin_20"
@@ -37,10 +39,10 @@
 
     <ImageView
         android:id="@+id/iv_contest_image"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/margin_150"
-        android:layout_marginStart="@dimen/margin_15"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_30"
         android:layout_marginBottom="@dimen/margin_15"
         android:src="@drawable/ic_cricket"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,18 +51,21 @@
 
     <TextView
         android:id="@+id/tv_contest_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_15"
+        android:layout_width="215dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
         android:lines="2"
+        android:gravity="right"
         android:text="@string/we_created_teams_for_you_n_just_predict_and_win"
         android:textSize="@dimen/ts_16"
-        app:layout_constraintStart_toEndOf="@id/iv_contest_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_contest_name" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="121dp"
+        android:layout_height="43dp"
         android:layout_marginEnd="@dimen/margin_25"
         android:layout_marginRight="@dimen/margin_25"
         android:background="@drawable/button_red"
@@ -70,6 +75,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/ts_14"
+        android:textStyle=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_contest_description" />

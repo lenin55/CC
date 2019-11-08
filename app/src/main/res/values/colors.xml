@@ -15,4 +15,6 @@
     <color name="color_blue">#0069FF</color>
     <color name="blue_line">#330069FF</color>
     <color name="light_green">#08C330</color>
+    <color name="color_time">#FC7D2D</color>
+    <color name="lite_grey">#A0A0A0</color>
 </resources>

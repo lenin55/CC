@@ -30,4 +30,17 @@
     <string name="enter_the_validation_code_you_received_by_sms">Enter the validation code you received by SMS</string>
     <string name="otp_validated_successfully">OTP validated Successfully</string>
     <string name="your_mobile_number_email_is_verified">Your Mobile Number/Email is verified</string>
+
+<!--    Match fixture card-->
+    <string name="sport_name">Cricket Contest</string>
+    <string name="series_name">IND vs PAK vs WI</string>
+    <string name="match_name">IND   vs   PAK</string>
+    <string name="match_time">Starts at 07:30 AM</string>
+
+<!--    contest card-->
+    <string name="contest_mega">Mega Contest</string>
+    <string name="join_now">Join Now</string>
+    <string name="contest_1on2">1 Winner on 2</string>
+    <string name="contest_1on3">1 Winner on 3</string>
+    <string name="entry_fee">Entry Fee</string>
 </resources>

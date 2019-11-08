@@ -18,7 +18,7 @@ public class ContestListAdapter extends RecyclerView.Adapter<ContestListAdapter.
     @NonNull
     @Override
     public ContestListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_contest, null);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_sport_card, null);
         return new ContestListAdapter.ContestListViewHolder(inflate);
     }
 

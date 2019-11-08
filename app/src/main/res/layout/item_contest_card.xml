@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_20"
+    android:padding="15dp"
+    android:background="@drawable/rectangle_white_cardview">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/contest_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexDirection="row"
+        app:justifyContent="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_30"
+            android:paddingRight="@dimen/margin_30"
+            android:background="@drawable/ic_name_ribbon"
+            android:text="@string/contest_mega"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:fontFamily="@font/p_sb"
+            android:gravity="center"/>
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/contest_info_blk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexDirection="row"
+        app:justifyContent="space_between"
+        app:alignItems="center"
+        app:flexWrap="wrap"
+        android:layout_marginTop="@dimen/margin_15"
+        app:layout_constraintTop_toBottomOf="@id/contest_title_text">
+
+        <LinearLayout
+            android:id="@+id/winning_prize_blk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/prize_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winning Prize"
+                android:textColor="@color/lite_grey"
+                android:textSize="12sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/prize_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="54,000"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"
+                android:textStyle="bold">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/winning_percent_blk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/percent_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winning %"
+                android:textColor="@color/lite_grey"
+                android:textSize="12sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/percent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Min 150% - unlt"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"
+                android:textStyle="bold">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/contest_prize_blk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/entryfee_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_fee"
+                android:textColor="@color/lite_grey"
+                android:textSize="12sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/entryfee_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"
+                android:textStyle="bold">
+            </TextView>
+
+        </LinearLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/contest_info_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        app:flexDirection="row"
+        app:justifyContent="space_between"
+        app:layout_constraintTop_toBottomOf="@id/contest_info_blk">
+    <TextView
+        android:id="@+id/join_now"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_dark"
+        android:gravity="center"
+        android:text="@string/join_now"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/p_sb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

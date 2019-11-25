@@ -12,6 +12,25 @@
     <color name="app_background">#EFEFEF</color>
     <color name="color_light_blue">#2A0069FF</color>
     <color name="color_red">#FF0024</color>
+    <color name="color_blue">#0069FF</color>
+    <color name="color_orange_red">#E03A01</color>
     <color name="blue_line">#330069FF</color>
     <color name="light_green">#08C330</color>
+    <color name="color_time">#FC7D2D</color>
+    <color name="lite_grey">#A0A0A0</color>
+    <color name="color_orange">#FA5D0E</color>
+
+<!--Team colors-->
+    <color name="team_a">#FA5E0D</color>
+    <color name="team_b">#45A794</color>
+    <color name="team_c">#FFC71B</color>
+    <color name="team_d">#063A8D</color>
+
+    <color name="team_a_lt">#FA5E0D</color>
+    <color name="team_b_lt">#45A794</color>
+    <color name="team_c_lt">#FFC71B</color>
+    <color name="team_d_lt">#063A8D</color>
+    <color name="color_line">#70707033</color>
+    <color name="color_ribbon_yellow">#ffa326</color>
+    <color name="color_purple">#4D544DFF</color>
 </resources>

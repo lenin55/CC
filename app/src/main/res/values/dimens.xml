@@ -29,4 +29,13 @@
     <dimen name="margin_35">35dp</dimen>
     <dimen name="ts_18">18sp</dimen>
     <dimen name="ts_16">16sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+    <dimen name="margin_250">250dp</dimen>
+    <dimen name="ts_30">30sp</dimen>
+    <dimen name="margin_400">400dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
 </resources>

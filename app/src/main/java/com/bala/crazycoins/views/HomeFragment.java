@@ -33,6 +33,8 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         homeView = inflater.inflate(R.layout.fragment_home, container, false);
+        homeView.findViewById(R.id.tv_contest).setVisibility(View.GONE);
+        homeView.findViewById(R.id.iv_logo).setVisibility(View.VISIBLE);
         return homeView;
     }
 

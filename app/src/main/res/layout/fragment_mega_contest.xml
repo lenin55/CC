@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".views.MegaContestFragment">
+
+    <FrameLayout
+        android:id="@+id/frm_mega_contest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_400"
+        android:background="@drawable/mega_contest_background"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tv_mega_contest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:drawableLeft="@drawable/ic_left_arrow"
+        android:drawablePadding="@dimen/margin_15"
+        android:fontFamily="@font/p_sb"
+        android:text="@string/mega_contest"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_30"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_league_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:text="Asian T20 League"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_mega_contest" />
+
+    <ImageView
+        android:id="@+id/iv_team_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@drawable/rectangle_white_cardview"
+        android:padding="@dimen/margin_10"
+        android:src="@drawable/ic_india_flag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
+
+    <TextView
+        android:id="@+id/tv_team_one_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_15"
+        android:text="IND"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/iv_team_one"
+        app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
+
+    <TextView
+        android:id="@+id/tv_team_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_15"
+        android:fontFamily="@font/p_sb"
+        android:text="(327/7)"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_14"
+        app:layout_constraintStart_toEndOf="@id/tv_team_one_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
+
+    <TextView
+        android:id="@+id/tv_overs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:text="(50 Overs)"
+        android:textColor="#72FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/iv_team_one"
+        app:layout_constraintTop_toBottomOf="@id/tv_team_one_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_14"
+        app:layout_constraintBottom_toTopOf="@id/tv_overs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_team_one_name" />
+
+    <ImageView
+        android:id="@+id/iv_team_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@drawable/rectangle_white_cardview"
+        android:padding="@dimen/margin_10"
+        android:src="@drawable/ic_pak_flag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
+
+    <TextView
+        android:id="@+id/tv_team_two_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_5"
+        android:text="PAK"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tv_team_two_score"
+        app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
+
+    <TextView
+        android:id="@+id/tv_team_two_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_10"
+        android:fontFamily="@font/p_sb"
+        android:text="(327/7)"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_14"
+        app:layout_constraintEnd_toStartOf="@id/iv_team_two"
+        app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
+
+    <TextView
+        android:id="@+id/tv_two_overs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_10"
+        android:text="(50 Overs)"
+        android:textColor="#72FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/iv_team_two"
+        app:layout_constraintTop_toBottomOf="@id/tv_team_one_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_14"
+        app:layout_constraintBottom_toTopOf="@id/tv_overs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_team_one_name" />
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:src="@drawable/line_yellow"
+        app:layout_constraintTop_toBottomOf="@id/iv_team_one" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_line">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_team_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/team_a"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_14" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="@dimen/margin_70"
+                android:layout_marginTop="@dimen/margin_5"
+                android:src="@drawable/ic_team_a"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/margin_2" />
+
+            <include
+                layout="@layout/team_list_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_team_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_b"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_14" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_team_b"
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="@dimen/margin_70"
+                android:layout_marginTop="@dimen/margin_5"
+                android:src="@drawable/ic_team_b"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/margin_2" />
+
+            <include
+                layout="@layout/team_list_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_team_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_c"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_14" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_team_c"
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="@dimen/margin_70"
+                android:layout_marginTop="@dimen/margin_5"
+                android:src="@drawable/ic_team_c"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/margin_2" />
+
+            <include
+                layout="@layout/team_list_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_team_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_d"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_14" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_team_d"
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="@dimen/margin_70"
+                android:layout_marginTop="@dimen/margin_5"
+                android:src="@drawable/ic_team_d"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/margin_2" />
+
+            <include
+                layout="@layout/team_list_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_20"
+    tools:context=".views.WelcomeScreenActivity">
+
+
+    <ImageView
+        android:id="@+id/joined_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_join_success"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/joined_success_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:text="You have successfully joined your Contests!"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/joined_success" />
+
+    <TextView
+        android:id="@+id/tv_lets_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:background="@drawable/button_blue"
+        android:gravity="center"
+        android:padding="@dimen/margin_20"
+        android:text="@string/join_more_contest"
+        android:textColor="@color/white"
+        android:textSize="@dimen/margin_20"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/joined_success_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

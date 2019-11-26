@@ -11,14 +11,15 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="my_contest">My Contest</string>
+    <string name="my_contest">My Contests</string>
     <string name="user">User</string>
     <string name="cricket_contest">Cricket Contest</string>
-    <string name="we_created_teams_for_you_n_just_predict_and_win">We created teams for you! \n Just predict and win!</string>
+    <string name="we_created_teams_for_you_n_just_predict_and_win">We created teams for you!\n Just predict and win!</string>
     <string name="play_now">Play Now</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="let_s_play">Let\'s Play</string>
+    <string name="join_more_contest">Join More Contest</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -29,4 +30,27 @@
     <string name="enter_the_validation_code_you_received_by_sms">Enter the validation code you received by SMS</string>
     <string name="otp_validated_successfully">OTP validated Successfully</string>
     <string name="your_mobile_number_email_is_verified">Your Mobile Number/Email is verified</string>
+
+    <!--    Match fixture card-->
+    <string name="sport_name">Cricket Contest</string>
+    <string name="series_name">IND vs PAK vs WI</string>
+    <string name="match_name">IND   vs   PAK</string>
+    <string name="match_time">Starts at 07:30 AM</string>
+
+    <!--    contest card-->
+    <string name="contest_mega">Mega Contest</string>
+    <string name="join_now">Join Now</string>
+    <string name="contest_1on2">1 Winner on 2</string>
+    <string name="contest_1on3">1 Winner on 3</string>
+    <string name="entry_fee">Entry Fee</string>
+    <string name="you">You</string>
+    <string name="mega_contest">Mega Contest</string>
+    <string name="total_winnings">Total Winnings</string>
+    <string name="winners">Winners</string>
+    <string name="dummy">--</string>
+    <string name="vs">vs</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+    <string name="team_c">Team C</string>
+    <string name="team_d">Team D</string>
 </resources>

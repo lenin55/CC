@@ -157,31 +157,27 @@
                     android:textSize="@dimen/ts_12" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_30"
+                app:layout_constraintBottom_toBottomOf="parent">
             <TextView
                 android:id="@+id/tv_not_a_member"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:text="Not a Member? "
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.429"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
+                android:text="Not a Member? " />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_5"
-                android:layout_marginBottom="@dimen/margin_25"
                 android:text="Sign Up Now"
                 android:textColor="@color/text_blue"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginEnd="@dimen/margin_25"
-                android:layout_marginRight="@dimen/margin_20"
-                app:layout_constraintEnd_toStartOf="@id/fab_next"
-                app:layout_constraintStart_toEndOf="@id/tv_not_a_member" />
-
+                android:textStyle="bold" />
+            </LinearLayout>
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_next"
                 android:layout_width="wrap_content"

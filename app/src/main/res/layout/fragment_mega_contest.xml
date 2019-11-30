@@ -7,6 +7,7 @@
     android:background="@color/app_background"
     tools:context=".views.MegaContestFragment">
 
+
     <FrameLayout
         android:id="@+id/frm_mega_contest"
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_20"
         android:layout_marginTop="@dimen/margin_50"
-        android:drawableLeft="@drawable/ic_left_arrow"
+        android:drawableLeft="@drawable/ic_left_white_arrow"
         android:drawablePadding="@dimen/margin_15"
         android:fontFamily="@font/p_sb"
         android:text="@string/mega_contest"
@@ -38,6 +39,7 @@
         android:text="Asian T20 League"
         android:textColor="@color/white"
         android:textSize="@dimen/ts_16"
+        android:fontFamily="@font/p_sb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_mega_contest" />
@@ -60,6 +62,7 @@
         android:layout_marginLeft="@dimen/margin_10"
         android:layout_marginTop="@dimen/margin_15"
         android:text="IND"
+        android:fontFamily="@font/p_sb"
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@id/iv_team_one"
         app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
@@ -116,6 +119,7 @@
         android:layout_marginTop="@dimen/margin_15"
         android:layout_marginRight="@dimen/margin_5"
         android:text="PAK"
+        android:fontFamily="@font/p_sb"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/tv_team_two_score"
         app:layout_constraintTop_toBottomOf="@id/tv_league_name" />
@@ -165,21 +169,19 @@
         android:src="@drawable/line_yellow"
         app:layout_constraintTop_toBottomOf="@id/iv_team_one" />
 
-    <LinearLayout
+
+    <com.google.android.flexbox.FlexboxLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:justifyContent="space_around"
         android:layout_marginTop="@dimen/margin_30"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_line">
+        android:paddingLeft="@dimen/margin_5"
+        android:paddingRight="@dimen/margin_5"
+        app:layout_constraintTop_toBottomOf="@+id/iv_line">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_5"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -193,25 +195,24 @@
                 android:textSize="@dimen/ts_14" />
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_team_a"
                 android:layout_width="@dimen/margin_70"
                 android:layout_height="@dimen/margin_70"
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_a"
                 app:civ_border_color="@color/white"
-                app:civ_border_width="@dimen/margin_2" />
+                app:civ_border_width="@dimen/margin_3" />
 
             <include
                 layout="@layout/team_list_card"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/margin_80"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_10" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_5"
-            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -230,21 +231,19 @@
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_b"
                 app:civ_border_color="@color/white"
-                app:civ_border_width="@dimen/margin_2" />
+                app:civ_border_width="@dimen/margin_3" />
 
             <include
                 layout="@layout/team_list_card"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/margin_80"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_10" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_5"
-            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -263,21 +262,19 @@
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_c"
                 app:civ_border_color="@color/white"
-                app:civ_border_width="@dimen/margin_2" />
+                app:civ_border_width="@dimen/margin_3" />
 
             <include
                 layout="@layout/team_list_card"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/margin_80"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_10" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/margin_5"
-            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -296,15 +293,15 @@
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_d"
                 app:civ_border_color="@color/white"
-                app:civ_border_width="@dimen/margin_2" />
+                app:civ_border_width="@dimen/margin_3" />
 
             <include
                 layout="@layout/team_list_card"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/margin_80"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_10" />
 
         </LinearLayout>
 
-    </LinearLayout>
+    </com.google.android.flexbox.FlexboxLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

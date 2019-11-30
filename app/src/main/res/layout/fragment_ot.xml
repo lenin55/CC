@@ -80,27 +80,30 @@
             app:layout_constraintTop_toBottomOf="@id/tv_enter_validation_msg"
             app:viewType="rectangle" />
 
-        <TextView
-            android:id="@+id/tv_receive_code"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
             android:layout_marginTop="@dimen/margin_30"
-            android:text="@string/did_t_get_code"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/otp_view" />
+            app:layout_constraintTop_toBottomOf="@id/otp_view" >
+            <TextView
+                android:id="@+id/tv_receive_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/did_t_get_code"
+                />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_5"
-            android:layout_marginLeft="@dimen/margin_5"
-            android:layout_marginTop="@dimen/margin_30"
-            android:text="@string/resend"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/tv_receive_code"
-            app:layout_constraintTop_toBottomOf="@id/otp_view" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="@string/resend"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_receive_code" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

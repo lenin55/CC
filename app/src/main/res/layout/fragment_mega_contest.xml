@@ -35,7 +35,7 @@
         android:id="@+id/tv_league_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_20"
         android:text="Asian T20 League"
         android:textColor="@color/white"
         android:textSize="@dimen/ts_16"

@@ -196,8 +196,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_team_a"
-                android:layout_width="@dimen/margin_70"
-                android:layout_height="@dimen/margin_70"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_a"
                 app:civ_border_color="@color/white"
@@ -226,8 +226,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_team_b"
-                android:layout_width="@dimen/margin_70"
-                android:layout_height="@dimen/margin_70"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_b"
                 app:civ_border_color="@color/white"
@@ -257,8 +257,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_team_c"
-                android:layout_width="@dimen/margin_70"
-                android:layout_height="@dimen/margin_70"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_c"
                 app:civ_border_color="@color/white"
@@ -288,8 +288,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_team_d"
-                android:layout_width="@dimen/margin_70"
-                android:layout_height="@dimen/margin_70"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
                 android:layout_marginTop="@dimen/margin_5"
                 android:src="@drawable/ic_team_d"
                 app:civ_border_color="@color/white"

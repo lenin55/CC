@@ -30,6 +30,7 @@
     <dimen name="margin_90">90dp</dimen>
     <dimen name="margin_350">350dp</dimen>
     <dimen name="margin_35">35dp</dimen>
+    <dimen name="ts_20">18sp</dimen>
     <dimen name="ts_18">18sp</dimen>
     <dimen name="ts_16">16sp</dimen>
     <dimen name="text_size_22">22sp</dimen>
